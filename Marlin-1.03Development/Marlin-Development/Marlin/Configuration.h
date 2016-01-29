@@ -202,10 +202,15 @@ Here are some standard links for getting your machine calibrated:
   #define K1 0.95 //smoothing factor within the PID
 
 // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
-// Crossbot
-    #define  DEFAULT_Kp 22.2
-    #define  DEFAULT_Ki 1.08
-    #define  DEFAULT_Kd 114
+// Crossbot (40w heater cartriges in E3D Chimera)
+//  #define  DEFAULT_Kp 22.2
+//  #define  DEFAULT_Ki 1.08
+//  #define  DEFAULT_Kd 114
+
+// Crossbot (24w heater cartriges in E3D Chimera)
+  #define DEFAULT_Kp 46.83 
+  #define DEFAULT_Ki 4.37
+  #define DEFAULT_Kd 125.46
 
 // MakerGear
 //    #define  DEFAULT_Kp 7.0
@@ -579,7 +584,7 @@ const bool Z_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the logic
 
 //Steps per mm
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {50,50,1600,150.7}  // mm
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200,150.7}  // mm Assuming 16x microstepping for all of the drivers
 #define DEFAULT_MAX_FEEDRATE          {200, 200, 6, 25}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {3000,3000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="CB-PLA-HIGH" version="2015-10-24 12:45:00" app="S3D-Software 3.0.2">
+<profile name="CB-PLA-HIGH" version="2015-12-25 15:00:52" app="S3D-Software 3.0.2">
   <baseProfile>Felix 3.0 Dual (modified)</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Medium</printQuality>
@@ -25,7 +25,7 @@
     <diameter>0.4</diameter>
     <autoWidth>1</autoWidth>
     <width>0.48</width>
-    <extrusionMultiplier>1</extrusionMultiplier>
+    <extrusionMultiplier>0.98</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>3</retractionDistance>
     <extraRestartDistance>-0.15</extraRestartDistance>
@@ -40,7 +40,7 @@
   <layerHeight>0.15</layerHeight>
   <topSolidLayers>3</topSolidLayers>
   <bottomSolidLayers>3</bottomSolidLayers>
-  <perimeterOutlines>3</perimeterOutlines>
+  <perimeterOutlines>2</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
   <startPointOption>2</startPointOption>
   <startPointOriginX>0</startPointOriginX>
@@ -55,7 +55,7 @@
   <raftExtruder>1</raftExtruder>
   <raftLayers>2</raftLayers>
   <raftOffset>3</raftOffset>
-  <raftSeparationDistance>0.24</raftSeparationDistance>
+  <raftSeparationDistance>0.18</raftSeparationDistance>
   <raftInfill>85</raftInfill>
   <disableRaftBaseLayers>1</disableRaftBaseLayers>
   <useSkirt>1</useSkirt>
@@ -79,13 +79,13 @@
   <internalInfillPattern>Fast Honeycomb</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
   <infillPercentage>30</infillPercentage>
-  <outlineOverlapPercentage>20</outlineOverlapPercentage>
+  <outlineOverlapPercentage>10</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
   <infillLayerInterval>1</infillLayerInterval>
   <infillAngles>0</infillAngles>
   <overlapInfillAngles>0</overlapInfillAngles>
-  <generateSupport>0</generateSupport>
+  <generateSupport>1</generateSupport>
   <supportExtruder>1</supportExtruder>
   <supportInfillPercentage>15</supportInfillPercentage>
   <supportExtraInflation>0</supportExtraInflation>
@@ -93,7 +93,7 @@
   <denseSupportInfillPercentage>80</denseSupportInfillPercentage>
   <supportLayerInterval>1</supportLayerInterval>
   <supportHorizontalPartOffset>0.3</supportHorizontalPartOffset>
-  <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
+  <supportUpperSeparationLayers>2</supportUpperSeparationLayers>
   <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
   <supportType>0</supportType>
   <supportGridSpacing>4</supportGridSpacing>
@@ -113,7 +113,7 @@
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="210"/>
+    <setpoint layer="1" temperature="205"/>
   </temperatureController>
   <temperatureController name="Heated Build Platform">
     <temperatureNumber>2</temperatureNumber>
@@ -124,9 +124,10 @@
     <setpoint layer="1" temperature="56"/>
   </temperatureController>
   <fanSpeed>
+    <setpoint layer="1" speed="0"/>
     <setpoint layer="2" speed="60"/>
   </fanSpeed>
-  <blipFanToFullPower>0</blipFanToFullPower>
+  <blipFanToFullPower>1</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
   <minSpeedLayerTime>20</minSpeedLayerTime>
   <minCoolingSpeedSlowdown>20</minCoolingSpeedSlowdown>
@@ -176,7 +177,7 @@
   <celebrationSong>Star Wars</celebrationSong>
   <createMB5G>0</createMB5G>
   <postProcessing></postProcessing>
-  <defaultSpeed>4500</defaultSpeed>
+  <defaultSpeed>3300</defaultSpeed>
   <outlineUnderspeed>0.8</outlineUnderspeed>
   <solidInfillUnderspeed>0.9</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
@@ -221,6 +222,7 @@
       <setpoint layer="1" temperature="56"/>
     </temperatureController>
     <fanSpeed>
+      <setpoint layer="1" speed="0"/>
       <setpoint layer="2" speed="60"/>
     </fanSpeed>
   </autoConfigureMaterial>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="CB-PLA-MED" version="2015-10-29 19:26:09" app="S3D-Software 3.0.2">
+<profile name="CB-PLA-MED" version="2016-01-01 09:27:20" app="S3D-Software 3.0.2">
   <baseProfile>Felix 3.0 Dual (modified)</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Medium</printQuality>
@@ -12,9 +12,9 @@
     <extrusionMultiplier>0.95</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>3</retractionDistance>
-    <extraRestartDistance>0</extraRestartDistance>
+    <extraRestartDistance>-0.2</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
-    <retractionSpeed>1800</retractionSpeed>
+    <retractionSpeed>2400</retractionSpeed>
     <useCoasting>1</useCoasting>
     <coastingDistance>0.2</coastingDistance>
     <useWipe>0</useWipe>
@@ -25,10 +25,10 @@
     <diameter>0.4</diameter>
     <autoWidth>1</autoWidth>
     <width>0.48</width>
-    <extrusionMultiplier>1</extrusionMultiplier>
+    <extrusionMultiplier>0.98</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>3</retractionDistance>
-    <extraRestartDistance>-0.15</extraRestartDistance>
+    <extraRestartDistance>0</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
     <retractionSpeed>2400</retractionSpeed>
     <useCoasting>1</useCoasting>
@@ -40,7 +40,7 @@
   <layerHeight>0.2</layerHeight>
   <topSolidLayers>3</topSolidLayers>
   <bottomSolidLayers>3</bottomSolidLayers>
-  <perimeterOutlines>3</perimeterOutlines>
+  <perimeterOutlines>2</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
   <startPointOption>2</startPointOption>
   <startPointOriginX>0</startPointOriginX>
@@ -51,11 +51,11 @@
   <firstLayerHeightPercentage>90</firstLayerHeightPercentage>
   <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
   <firstLayerUnderspeed>0.35</firstLayerUnderspeed>
-  <useRaft>0</useRaft>
+  <useRaft>1</useRaft>
   <raftExtruder>1</raftExtruder>
   <raftLayers>2</raftLayers>
   <raftOffset>3</raftOffset>
-  <raftSeparationDistance>0.24</raftSeparationDistance>
+  <raftSeparationDistance>0.28</raftSeparationDistance>
   <raftInfill>85</raftInfill>
   <disableRaftBaseLayers>1</disableRaftBaseLayers>
   <useSkirt>1</useSkirt>
@@ -78,7 +78,7 @@
   <infillExtruder>1</infillExtruder>
   <internalInfillPattern>Fast Honeycomb</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>30</infillPercentage>
+  <infillPercentage>20</infillPercentage>
   <outlineOverlapPercentage>20</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
@@ -125,13 +125,14 @@
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
+    <setpoint layer="2" speed="60"/>
   </fanSpeed>
-  <blipFanToFullPower>0</blipFanToFullPower>
+  <blipFanToFullPower>1</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
-  <minSpeedLayerTime>30</minSpeedLayerTime>
+  <minSpeedLayerTime>20</minSpeedLayerTime>
   <minCoolingSpeedSlowdown>20</minCoolingSpeedSlowdown>
   <increaseFanForCooling>1</increaseFanForCooling>
-  <minFanLayerTime>20</minFanLayerTime>
+  <minFanLayerTime>30</minFanLayerTime>
   <maxCoolingFanSpeed>100</maxCoolingFanSpeed>
   <increaseFanForBridging>0</increaseFanForBridging>
   <bridgingFanSpeed>100</bridgingFanSpeed>
@@ -210,7 +211,7 @@
   <toolChangeRetractionSpeed>1800</toolChangeRetractionSpeed>
   <allowThinWallGapFill>1</allowThinWallGapFill>
   <thinWallAllowedOverlapPercentage>30</thinWallAllowedOverlapPercentage>
-  <horizontalSizeCompensation>0</horizontalSizeCompensation>
+  <horizontalSizeCompensation>-0.1</horizontalSizeCompensation>
   <autoConfigureMaterial name="PLA">
     <temperatureController name="Heated Build Platform">
       <temperatureNumber>2</temperatureNumber>
@@ -222,6 +223,7 @@
     </temperatureController>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
+      <setpoint layer="2" speed="60"/>
     </fanSpeed>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="ABS">
@@ -483,7 +485,7 @@
     <topSolidLayers>3</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>30</infillPercentage>
+    <infillPercentage>20</infillPercentage>
     <supportInfillPercentage>15</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="High">
